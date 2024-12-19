@@ -1,0 +1,166 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  /* min-width: 0;
+  min-height: 0; */
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  margin: 0;
+  background-color: var(--Py);
+
+  /* background-color: red; */
+}
+
+
+html,
+body {
+  touch-action: none;
+  overscroll-behavior: none;
+
+  /* height: calc(100dvh + env(safe-area-inset-bottom)); */
+  width: 100% !important;
+
+
+  /* touch-action: none; */
+}
+
+html {
+  overflow: visible;
+  height: calc(100svh + env(safe-area-inset-top));
+}
+
+body {
+  overflow: clip;
+  height: calc(100svh + env(safe-area-inset-top));
+
+}
+
+body.focus {
+  touch-action: none;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.875em;
+}
+
+h6 {
+  font-size: 0.625em;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+a:visited {
+  /* color: unset; */
+}
+
+input[type=checkbox] {
+  /* background-color: red;
+  appearance: none;
+  -webkit-appearance: none; */
+
+}
+
+input[type=search],
+input[type=text],
+textarea {
+  outline: none;
+}
+
+button,
+input[type=search],
+input[type=text],
+select,
+textarea {
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+
+  border: none;
+  background-color: transparent;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+
+  padding: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgb(var(--S));
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow:
+    inset 0 0 0px 100px rgb(var(--blue) / 0%),
+    inset 0 0 0px 100px rgb(var(--P));
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+input[type="search"]::-ms-clear,
+input::-ms-reveal,
+input::-ms-clear,
+input::-ms-reveal {
+  display: none !important;
+  opacity: 0.5;
+}
+
+input::placeholder {
+  white-space: nowrap;
+  color: inherit;
+  opacity: 0.75;
+  /* color: rgb(var(--S)); */
+}
+
+svg {
+  flex-shrink: 0;
+  color: inherit;
+  /* BUG: IOS, SVG slightly off center without this */
+  /* translate: 0px 0px !important; */
+  /* fill: rgb(var(--S));
+  stroke: rgb(var(--S)); */
+}

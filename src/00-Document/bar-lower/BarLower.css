@@ -1,0 +1,5 @@
+bar-lower {
+	flex-shrink: 0;
+	height: calc(12px * 3);
+	background-color: rgb(var(--yellow));
+}

@@ -1,0 +1,97 @@
+/* color */
+:root {
+  /* --red: 234 67 53; */
+  --red: 255 60 48;
+  --yellow: 251 188 5;
+  --green: 52 168 83;
+  --blue: 86 120 255;
+
+  --blue-text: 73 102 217;
+  /* --blue-text: var(--blue); */
+
+  --red-dark: 175 50 40;
+  --green-dark: 39 126 62;
+  --blue-dark: 64 90 192;
+
+  --purple: 88 86 214;
+
+  --black: 0 0 0;
+  --white: 255 255 255;
+  /* --gray-white: 242 242 247; */
+  --white-soft: 240 240 240;
+  --black-soft: 20 20 20;
+  --soft: var(--white-soft);
+
+  --electric-blue: 48 160 250;
+  --bluer: 20 128 250;
+  --electric-blue: 48 176 250;
+  --electric-blue-dark: 0 144 240;
+
+  /* --P: var(--gray-white); */
+  --P: 255 255 255;
+  /* --Py: color-mix(in srgb, rgb(var(--white)) 90%, rgb(var(--yellow)) 20%); */
+  --Py: rgb(251, 239, 215);
+  --S: var(--black);
+
+
+  --P20: 216 216 216;
+
+  --blue-pale: 239 242 255;
+
+  @media (prefers-color-scheme: dark) {
+    --blue-text: 128 154 255;
+
+    --blue-pale: 255 0 0;
+
+    /* --blue: var(--electric-blue); */
+
+    --P: var(--black);
+    --Py: color-mix(in srgb, rgb(var(--black)) 90%, rgb(var(--yellow)) 10%);
+    --S: var(--white);
+    --soft: var(--black-soft);
+
+    --P20: 40 40 40;
+  }
+}
+
+/* font */
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, Inter,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  line-height: 1.375;
+  font-weight: 500;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: rgb(var(--black));
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: rgb(var(--white));
+  }
+}
+
+/* transition */
+:root {
+  /* --bounce: cubic-bezier(.47,1.64,.41,.8); */
+  --bounce: cubic-bezier(0.47, 1.64, 0.41, 0.8);
+  --bounce: cubic-bezier(0.4, 2, 0.5, 0.75);
+  --extreme-bounce: cubic-bezier(0.47, 6.64, 0.41, 0.8);
+}
+
+body:not(.animate) * {
+  transition: none !important;
+}

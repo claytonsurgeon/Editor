@@ -1,0 +1,32 @@
+ruler-col {
+	/* background-color: blue; */
+
+	span {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		translate: -50% -50%;
+
+		white-space: nowrap;
+		font-size: 10px;
+		font-weight: 600;
+		opacity: 0.5;
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+
+		width: 1px;
+		border-radius: 2px;
+
+		background-color: rgb(var(--S) / 25%);
+	}
+	&::after {
+		inset: 30% auto 30% 2px;
+	}
+	&::before {
+		inset: 30% 2px 30% auto;
+	}
+}

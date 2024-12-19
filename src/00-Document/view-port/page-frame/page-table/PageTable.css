@@ -1,0 +1,26 @@
+page-table {
+	overflow: clip;
+
+	display: flex;
+	flex-direction: column;
+	row-gap: 2px;
+
+	min-height: 200px;
+	min-width: calc(12px * 70);
+	border-radius: 2px;
+
+	background-color: rgb(245, 245, 245);
+	box-shadow: 0 0 0 1px rgb(var(--black) / 5%),
+		0 1px 5px rgb(var(--black) / 5%), 0 5px 15px rgb(var(--black) / 5%),
+		0 1px 5px rgb(var(--yellow) / 5%), 0 5px 15px rgb(var(--yellow) / 5%);
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0 auto 0 150px;
+		width: 2px;
+
+		background-color: white;
+		box-shadow: inset -2px 0 0 rgb(var(--red) / 20%);
+	}
+}

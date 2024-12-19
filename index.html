@@ -1,13 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/index.ts"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover"
+		/>
+
+		<meta name="theme-color" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta
+			name="apple-mobile-web-app-status-bar-style"
+			content="black-translucent"
+		/>
+
+		<meta name="apple-mobile-web-app-title" content="RowTangle" />
+
+		<title>Editor</title>
+		<script defer type="module" src="/index.ts"></script>
+	</head>
+
+	<body>
+		<bar-upper></bar-upper>
+		<view-port>
+			<page-frame>
+				<ruler-key></ruler-key>
+				<ruler-col>
+					<span>256 CHARS</span>
+				</ruler-col>
+				<ruler-row>
+					<span>30 LINES</span>
+				</ruler-row>
+				<page-table>
+					<row-head></row-head>
+					<row-line></row-line>
+					<row-line></row-line>
+					<row-line></row-line>
+					<row-line></row-line>
+					<row-line></row-line>
+					<row-foot></row-foot>
+				</page-table>
+			</page-frame>
+		</view-port>
+		<bar-lower></bar-lower>
+	</body>
 </html>

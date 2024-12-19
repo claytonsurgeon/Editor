@@ -1,0 +1,9 @@
+bar-upper {
+	z-index: 1;
+	flex-shrink: 0;
+
+	height: calc(12px * 8);
+
+	background-color: rgb(var(--P) / 50%);
+	box-shadow: 0 1px 0 rgb(var(--black) / 10%);
+}

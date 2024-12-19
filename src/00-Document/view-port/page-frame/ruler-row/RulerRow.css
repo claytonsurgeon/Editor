@@ -1,0 +1,33 @@
+ruler-row {
+	/* background-color: green; */
+
+	span {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		rotate: 90deg;
+		translate: -50% -50%;
+
+		white-space: nowrap;
+		font-size: 10px;
+		font-weight: 600;
+		opacity: 0.5;
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+
+		height: 1px;
+		border-radius: 2px;
+
+		background-color: rgb(var(--S) / 25%);
+	}
+	&::after {
+		inset: 2px 30% auto 30%;
+	}
+	&::before {
+		inset: auto 30% 2px 30%;
+	}
+}
