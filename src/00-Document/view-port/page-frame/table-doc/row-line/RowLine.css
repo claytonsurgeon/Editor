@@ -1,0 +1,20 @@
+row-line {
+	display: grid;
+	grid-template-columns: min-content auto min-content;
+	column-gap: 2px;
+	flex-shrink: 0;
+	height: calc(12px * 2.5);
+	/* background-color: blue; */
+
+	&:hover,
+	&:has(mark-up:focus) {
+		box-shadow: 0 2px 0 rgb(var(--red) / 20%);
+	}
+}
+
+row-line.header {
+	height: calc(12px * 8);
+}
+row-line.footer {
+	height: calc(12px * 4);
+}

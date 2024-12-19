@@ -1,0 +1,38 @@
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+
+@supports (font-variation-settings: normal) {
+	code {
+		font-family: "Fira Code VF", monospace;
+	}
+}
+
+code {
+	display: flex;
+
+	align-items: center;
+
+	height: auto;
+	min-height: 100%;
+
+	/* background-color: red; */
+	outline: none;
+
+	font-size: 14px;
+	font-weight: 400;
+	font-family: "Fira Code", monospace;
+
+	padding: 0 calc(12px * 2);
+
+	symbol-name {
+		font-weight: 600;
+	}
+	symbol-arrow {
+		font-weight: 300;
+		opacity: 0.5;
+
+		padding: 0 4px;
+	}
+	symbol-number {
+		color: orangered;
+	}
+}
