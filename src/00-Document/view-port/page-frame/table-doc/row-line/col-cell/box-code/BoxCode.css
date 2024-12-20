@@ -1,0 +1,60 @@
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+
+@supports (font-variation-settings: normal) {
+	code,
+	input {
+		font-family: "Fira Code VF", monospace;
+	}
+}
+
+box-code {
+	display: flex;
+	align-items: center;
+
+	height: 100%;
+
+	div,
+	input {
+		/* background-color: red; */
+		/* opacity: 0.5; */
+
+		padding: 0 calc(12px * 2);
+
+		font-size: 14px;
+		font-weight: 400;
+		font-family: "Fira Code", monospace;
+
+		white-space: pre;
+	}
+
+	div {
+		/* height: 100%; */
+		width: 100%;
+	}
+
+	input {
+		display: block;
+		position: absolute;
+		inset: 0;
+		height: 100%;
+		width: 100%;
+		color: rgb(0 0 0 / 0%);
+		caret-color: rgb(var(--S));
+	}
+
+	lex-label,
+	lex-symbol {
+		/* font-weight: 600; */
+		color: blue;
+	}
+	lex-symbol:has(~ lex-arrow) {
+		font-weight: 600;
+	}
+	lex-arrow {
+		opacity: 0.5;
+	}
+	lex-integer,
+	lex-decimal {
+		color: orangered;
+	}
+}

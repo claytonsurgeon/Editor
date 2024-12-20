@@ -1,10 +1,6 @@
 import "./Code.css";
 
-export default function Code() {
-	document.querySelectorAll<HTMLInputElement>("code").forEach(elm => {
-		elm.addEventListener("input", function (evt) {});
-	});
-}
+export default function Code() {}
 
 // function getCursorPosition(editableDiv) {
 //   let selection = window.getSelection();

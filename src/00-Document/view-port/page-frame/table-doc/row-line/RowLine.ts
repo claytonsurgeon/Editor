@@ -1,11 +1,6 @@
 import "./RowLine.css";
-
-import ColL from "./col-l/ColL";
-import ColM from "./col-m/ColM";
-import ColR from "./col-r/ColR";
+import ColCell from "./col-cell/ColCell";
 
 export default function RowLine() {
-	ColL();
-	ColM();
-	ColR();
+	ColCell();
 }
