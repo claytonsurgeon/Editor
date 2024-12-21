@@ -4,7 +4,7 @@ row-line {
 	grid-template-columns: min-content auto min-content;
 	column-gap: 2px;
 	flex-shrink: 0;
-	min-height: calc(12px * 2.5);
+	min-height: calc(12px * 2);
 	/* background-color: blue; */
 
 	&:hover,

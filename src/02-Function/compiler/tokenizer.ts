@@ -102,10 +102,10 @@ export class Tokenizer {
 			case "/":
 				return this.addToken(TOKEN.div);
 
-			case " ":
-			case "\r":
+			// case "\r":
 			case "\t":
-				return this.addToken(TOKEN.space);
+			case " ":
+				return this.space();
 
 			case "\n":
 				this.col = 1;
@@ -152,6 +152,13 @@ export class Tokenizer {
 			this.tokens.at(-2)?.type == TOKEN.symbol
 		) {
 			this.tokens.at(-2)!.type = TOKEN.label;
+			// this.tokens.pop();
+		} else if (
+			this.tokens.at(-1)?.type == TOKEN.arrow &&
+			this.tokens.at(-2)?.type == TOKEN.space &&
+			this.tokens.at(-3)?.type == TOKEN.symbol
+		) {
+			this.tokens.at(-3)!.type = TOKEN.label;
 			// this.tokens.pop();
 		}
 	}
@@ -215,6 +222,12 @@ export class Tokenizer {
 		// todo: scan and replace escape sequences
 		const value = this.source.slice(this.start + 1, this.cursor - 1);
 		this.addToken(TOKEN.string, value);
+	}
+
+	space() {
+		while (this.peek() == " " || this.peek() == "\t") this.advance();
+
+		this.addToken(TOKEN.space, this.source.slice(this.start, this.cursor));
 	}
 
 	number() {

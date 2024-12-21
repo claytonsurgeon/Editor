@@ -13,7 +13,6 @@ export default function BoxCode() {
 		const compiler = new Compiler();
 
 		input.addEventListener("input", evt => {
-			console.log("fuck");
 			compiler.run(input.value);
 
 			console.log(compiler.tokens);

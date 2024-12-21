@@ -71,8 +71,8 @@ box-code {
 		color: var(--purple);
 	}
 
-	lex-label,
-	lex-symbol:has(~ lex-arrow) {
+	/* lex-symbol:has(~ lex-arrow), */
+	lex-label {
 		color: var(--blue-accent);
 		font-weight: 600;
 	}
@@ -110,6 +110,9 @@ box-code {
 		font-weight: 300;
 		opacity: 0.75;
 		color: var(--text);
+	}
+	lex-where {
+		opacity: 1;
 	}
 	lex-comma {
 		display: inline-block;
