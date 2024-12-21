@@ -64,8 +64,12 @@ export class Tokenizer {
 				return this.addToken(this.match(">") ? TOKEN.arrow : TOKEN.sub);
 			case "+":
 				return this.addToken(TOKEN.add);
+			case "±":
+				return this.addToken(TOKEN.addsub);
 			case "*":
 				return this.addToken(TOKEN.mul);
+			case "√":
+				return this.addToken(TOKEN.rad);
 			case "^":
 				return this.addToken(this.match("/") ? TOKEN.rad : TOKEN.pow);
 			case "\\":
@@ -78,6 +82,12 @@ export class Tokenizer {
 
 			case "=":
 				return this.addToken(TOKEN.equal);
+
+			case "≥":
+				return this.addToken(TOKEN.greater_equal);
+
+			case "≤":
+				return this.addToken(TOKEN.less_equal);
 
 			case "<":
 				return this.addToken(
@@ -305,45 +315,83 @@ export class Token {
 }
 
 export enum TOKEN {
-	paren_l = "(",
-	paren_r = ")",
-	squaren_r = "]",
-	squaren_l = "[",
-	curlen_l = "{",
-	curlen_r = "}",
+	// paren_l = "(",
+	// paren_r = ")",
+	// squaren_r = "]",
+	// squaren_l = "[",
+	// curlen_l = "{",
+	// curlen_r = "}",
+	paren_l = "paren-l",
+	paren_r = "paren-r",
+	squaren_l = "squaren-l",
+	squaren_r = "squaren-r",
+	curlen_l = "curlen-l",
+	curlen_r = "curlen-r",
 
-	comma = ",",
-	semicolon = ";",
-	colon = ":",
-	quote = "'",
+	// comma = ",",
+	// semicolon = ";",
+	// colon = ":",
+	// quote = "'",
+	// space = " ",
+
+	comma = "comma",
+	semicolon = "semicolon",
+	colon = "colon",
+	quote = "quote",
 	space = "space",
 
-	dot = ".",
-	range = "..",
+	// dot = ".",
+	// range = "..",
 	// arrow = "→",
+
+	dot = "dot",
+	range = "range",
 	arrow = "arrow",
 
-	join = "¤",
-	juxt = "⋅",
+	// join = "¤",
+	// juxt = "⋅",
 
-	add = "+",
-	sub = "-",
-	div = "/",
-	mul = "*",
+	join = "join",
+	juxt = "juxt",
 
-	pow = "^",
-	log = "\\",
-	rad = "√",
+	// addsub = "±",
+	// add = "+",
+	// sub = "-",
+	// div = "/",
+	// mul = "*",
 
-	bang = "!",
+	addsub = "addsub",
+	add = "add",
+	sub = "sub",
+	div = "div",
+	mul = "mul",
 
-	not_equal = "≠",
-	equal = "=",
+	// pow = "^",
+	// log = "\\",
+	// rad = "√",
 
-	greater_equal = "≥",
-	greater = ">",
-	less_equal = "≤",
-	less = "<",
+	pow = "pow",
+	log = "log",
+	rad = "rad",
+
+	// bang = "!",
+	bang = "bang",
+
+	// not_equal = "≠",
+	// equal = "=",
+
+	not_equal = "not-equal",
+	equal = "equal",
+
+	// greater_equal = "≥",
+	// greater = ">",
+	// less_equal = "≤",
+	// less = "<",
+
+	greater_equal = "greater-equal",
+	greater = "greater",
+	less_equal = "less-equal",
+	less = "less",
 
 	symbol = "symbol",
 	label = "label",

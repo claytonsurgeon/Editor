@@ -22,6 +22,8 @@ export default function BoxCode() {
 		});
 
 		input.addEventListener("change", evt => {});
+
+		input.dispatchEvent(new CustomEvent("input"));
 	});
 }
 

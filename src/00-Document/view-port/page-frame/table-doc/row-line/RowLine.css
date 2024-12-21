@@ -1,5 +1,6 @@
 row-line {
 	display: grid;
+	/* flex-shrink: 0; */
 	grid-template-columns: min-content auto min-content;
 	column-gap: 2px;
 	flex-shrink: 0;

@@ -1,5 +1,6 @@
 page-frame {
 	display: grid;
+	flex-shrink: 0;
 
 	grid-template-columns: 36px auto; /* 1st column 36px, 2nd column auto */
 	grid-template-rows: 36px auto; /* 1st row 36px, 2nd row auto */
